@@ -1,0 +1,17 @@
+[package]
+name = "rx"
+version = "0.1.0"
+edition = "2021"
+description = "A from-scratch regex engine: parser -> bytecode compiler -> Pike VM. Linear-time matching, zero dependencies."
+
+[lib]
+name = "rx"
+path = "src/lib.rs"
+
+[[bin]]
+name = "rx"
+path = "src/main.rs"
+
+[profile.release]
+opt-level = 3
+lto = true
